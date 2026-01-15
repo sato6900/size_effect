@@ -61,28 +61,13 @@
 
 ### 基本アロケーション
 ```
-総資金の10% = 戦略資金
-├── Long側(Large Q5): 5%
-└── Short側(Small Q5): 5%
+総資金の100% = 戦略資金
+├── Long側(Large Q5): 50%
+└── Short側(Small Q5): 50%
 ```
 
 ### 個別銘柄サイジング
-- **最大単一銘柄**: 戦略資金の20%（総資金の2%）
-- **目標銘柄数**: 各サイド5-10銘柄
 - **等ウェイト**: 各銘柄均等配分
-
-### 動的調整
-```python
-# ボラティリティ調整ポジションサイズ
-position_size = base_size / (14d_volatility / target_volatility)
-
-# ターゲットボラティリティ: 年率30%
-target_volatility = 0.30
-
-# 最小・最大制限
-min_size = base_size * 0.5
-max_size = base_size * 2.0
-```
 
 ---
 
